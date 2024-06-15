@@ -1,0 +1,15 @@
+{
+  "name": "bankingapp",
+  "version": "1.0.0",
+  "description": "This is a side project that will mimic the functionality of a financial web application, through a lens similar to apps like Robinhood, Acorns, Webull, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
