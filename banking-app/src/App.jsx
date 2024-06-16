@@ -1,40 +1,30 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from './NavBar';
+import Home from './Home';
+import About from './About';
+import News from './News';
+import Stocks from './Stocks';
+import Crypto from './Crypto';
+import Login from './Login';
+import Register from './Register';
 import './App.css';
 
-function Home() {
-  return <h1>Home Component</h1>;
-}
-
-function About() {
-  return <h1>About Component</h1>;
-}
-
-function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <NavBar />
+            <Switch>
+                <Route path='/' exact component={Home} />
+                <Route path='/about' component={About} />
+                <Route path='/news' component={News} />
+                <Route path='/stocks' component={Stocks} />
+                <Route path='/crypto' component={Crypto} />
+                <Route path='/login' component={Login} />
+                <Route path='/register' component={Register} />
+            </Switch>
+        </Router>
+    );
+};
 
 export default App;
