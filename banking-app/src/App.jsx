@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, } from 'react-router-dom';
-import { Routes as Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import About from './About';
@@ -14,16 +13,18 @@ import './App.css';
 const App = () => {
     return (
         <Router>
-            <NavBar />
-            <Switch>
-                <Route path='/' exact component={Home} />
-                <Route path='/about' component={About} />
-                <Route path='/news' component={News} />
-                <Route path='/stocks' component={Stocks} />
-                <Route path='/crypto' component={Crypto} />
-                <Route path='/login' component={Login} />
-                <Route path='/register' component={Register} />
-            </Switch>
+            <div>
+                <NavBar />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path='/about' element={<About />} />
+                    <Route path='/news' element={<News />} />
+                    <Route path='/stocks' element={<Stocks />} />
+                    <Route path='/crypto' element={<Crypto />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path='/register' element={<Register />} />
+                </Routes>
+            </div>
         </Router>
     );
 };
