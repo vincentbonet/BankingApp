@@ -14,7 +14,7 @@ import Searchbar from './components/Searchbar';
 import './App.css';
 
 const App = () => {
-    const suggestions = ['Account Balance', 'Transfer Funds', 'Transaction History', 'Pay Bills', 'Find ATMs'];
+    const suggestions = ['Apple', 'Microsoft', 'Google'];
 
     return (
         <Router>
