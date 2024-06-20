@@ -9,6 +9,7 @@ import Crypto from './components/Crypto';
 import Login from './components/Login';
 import Register from './components/Register';
 import Searchbar from './components/Searchbar';
+import Footer from './components/Footer';
 
 
 import './App.css';
@@ -32,6 +33,7 @@ const App = () => {
                         <Route path='/register' element={<Register />} />
                     </Routes>
                 </div>
+                <Footer />
             </div>
         </Router>
     );

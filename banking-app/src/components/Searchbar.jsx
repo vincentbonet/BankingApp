@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './Searchbar.css'; // Assuming you have a CSS file for styling
+import './Searchbar.css'; 
 
 const Searchbar = ({ suggestions }) => {
   const [query, setQuery] = useState('');
