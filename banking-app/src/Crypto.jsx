@@ -1,4 +1,5 @@
 import React from 'react';
+import './Crypto.css';
 
 const Crypto = () => {
     // Your code here
