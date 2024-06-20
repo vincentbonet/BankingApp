@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavBar from './NavBar';
-import Home from './Home';
-import About from './About';
-import News from './News';
-import Stocks from './Stocks';
-import Crypto from './Crypto';
-import Login from './Login';
-import Register from './Register';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import About from './components/About';
+import News from './components/News';
+import Stocks from './components/Stocks';
+import Crypto from './components/Crypto';
+import Login from './components/Login';
+import Register from './components/Register';
 
 
 import './App.css';
