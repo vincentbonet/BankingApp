@@ -13,19 +13,24 @@ import Register from './Register';
 import './App.css';
 
 const App = () => {
+    const suggestions = ['Account Balance', 'Transfer Funds', 'Transaction History', 'Pay Bills', 'Find ATMs'];
+
     return (
         <Router>
             <div>
                 <NavBar />
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    <Route path='/about' element={<About />} />
-                    <Route path='/news' element={<News />} />
-                    <Route path='/stocks' element={<Stocks />} />
-                    <Route path='/crypto' element={<Crypto />} />
-                    <Route path='/login' element={<Login />} />
-                    <Route path='/register' element={<Register />} />
-                </Routes>
+                <div className="content">
+                    <Searchbar suggestions={suggestions} />
+                    <Routes>
+                        <Route path='/' element={<Home />} />
+                        <Route path='/about' element={<About />} />
+                        <Route path='/news' element={<News />} />
+                        <Route path='/stocks' element={<Stocks />} />
+                        <Route path='/crypto' element={<Crypto />} />
+                        <Route path='/login' element={<Login />} />
+                        <Route path='/register' element={<Register />} />
+                    </Routes>
+                </div>
             </div>
         </Router>
     );
