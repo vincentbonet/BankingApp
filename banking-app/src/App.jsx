@@ -8,6 +8,7 @@ import Stocks from './components/Stocks';
 import Crypto from './components/Crypto';
 import Login from './components/Login';
 import Register from './components/Register';
+import Searchbar from './components/Searchbar';
 
 
 import './App.css';
