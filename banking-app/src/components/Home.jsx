@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { ReactComponent as Icon } from './assets/chart-line-up.svg';
+
 
 
 const Home = () => {
@@ -19,9 +19,6 @@ const Home = () => {
     return (
         <div className="home-container">
             <div className="hero">
-                <div className="animated-logo">
-                    <Icon className ="logo" />
-                </div>
                 <h1>Welcome to My Banking App!</h1>
                 <p>Manage your finances with ease and security.</p>
                 <button className="cta-button">Get Started</button>
