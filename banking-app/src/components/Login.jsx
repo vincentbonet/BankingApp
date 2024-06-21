@@ -7,13 +7,11 @@ const Register = () => {
 
     const handleRegister = () => {
         // Implement your registration logic here
-        // You can use the values of username, password, and email
-        // to send a registration request to your backend server
     };
 
     return (
         <div>
-            <h2>Register</h2>
+            <h2>Login</h2>
             <form>
                 <label htmlFor="username">Username:</label>
                 <input
@@ -40,7 +38,7 @@ const Register = () => {
                 />
 
                 <button type="button" onClick={handleRegister}>
-                    Register
+                    Login
                 </button>
             </form>
         </div>

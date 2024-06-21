@@ -22,7 +22,6 @@ const App = () => {
             <div>
                 <NavBar />
                 <div className="content">
-                    <Searchbar suggestions={suggestions} />
                     <Routes>
                         <Route path='/' element={<Home />} />
                         <Route path='/about' element={<About />} />
