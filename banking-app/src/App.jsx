@@ -7,7 +7,6 @@ import About from './components/About';
 import News from './components/News';
 import Stocks from './components/Stocks';
 import Crypto from './components/Crypto';
-import Register from './components/RegisterModal';
 import Footer from './components/Footer';
 import LoginModal from './components/LoginModal';
 import RegisterModal from './components/RegisterModal';
@@ -36,7 +35,6 @@ const App = () => {
                             <Route path='/news' element={<News />} />
                             <Route path='/stocks' element={<Stocks />} />
                             <Route path='/crypto' element={<Crypto />} />
-                            <Route path='/register' element={<Register />} />
                         </Routes>
                     </div>
                     <Footer />

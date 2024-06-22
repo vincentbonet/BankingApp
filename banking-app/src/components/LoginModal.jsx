@@ -1,12 +1,5 @@
-
 import React, { useState } from 'react';
-import {
-  Modal,
-  TextInput,
-  PasswordInput,
-  Button,
-  Box,
-} from '@mantine/core';
+import { Modal, TextInput, PasswordInput, Button, Box } from '@mantine/core';
 
 const LoginModal = ({ opened, onClose }) => {
   const [email, setEmail] = useState('');
@@ -17,7 +10,7 @@ const LoginModal = ({ opened, onClose }) => {
     // Handle login logic here
     console.log('Email:', email);
     console.log('Password:', password);
- 
+
     onClose();
   };
 
