@@ -1,40 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { MantineProvider } from '@mantine/core';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import News from './components/News';
 import Stocks from './components/Stocks';
 import Crypto from './components/Crypto';
-import Login from './components/Login';
-import Register from './components/Register';
-import Searchbar from './components/Searchbar';
+import Register from './components/RegisterModal';
 import Footer from './components/Footer';
-
+import LoginModal from './components/LoginModal';
+import RegisterModal from './components/RegisterModal';
 
 import './App.css';
 
 const App = () => {
-    const suggestions = ['Apple', 'Microsoft', 'Google'];
+    const [loginModalOpened, setLoginModalOpened] = useState(false);
+    const [registerModalOpened, setRegisterModalOpened] = useState(false);
+
+    const openRegisterModal = () => setRegisterModalOpened(true);
+    const closeRegisterModal = () => setRegisterModalOpened(false);
+
+    const openLoginModal = () => setLoginModalOpened(true);
+    const closeLoginModal = () => setLoginModalOpened(false);
 
     return (
-        <Router>
-            <div>
-                <NavBar />
-                <div className="content">
-                    <Routes>
-                        <Route path='/' element={<Home />} />
-                        <Route path='/about' element={<About />} />
-                        <Route path='/news' element={<News />} />
-                        <Route path='/stocks' element={<Stocks />} />
-                        <Route path='/crypto' element={<Crypto />} />
-                        <Route path='/login' element={<Login />} />
-                        <Route path='/register' element={<Register />} />
-                    </Routes>
+        <MantineProvider withGlobalStyles withNormalizeCSS>
+            <Router>
+                <div>
+                    <NavBar openLoginModal={openLoginModal} registerModalOpened={openRegisterModal}/>
+                    <div className="content">
+                        <Routes>
+                            <Route path='/' element={<Home />} />
+                            <Route path='/about' element={<About />} />
+                            <Route path='/news' element={<News />} />
+                            <Route path='/stocks' element={<Stocks />} />
+                            <Route path='/crypto' element={<Crypto />} />
+                            <Route path='/register' element={<Register />} />
+                        </Routes>
+                    </div>
+                    <Footer />
+                    <LoginModal opened={loginModalOpened} onClose={closeLoginModal} />
+                    <RegisterModal opened={registerModalOpened} onClose={closeRegisterModal} />
                 </div>
-                <Footer />
-            </div>
-        </Router>
+            </Router>
+        </MantineProvider>
     );
 };
 

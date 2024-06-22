@@ -118,7 +118,6 @@ p {
     color: #ffffff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .features-list {
         flex-direction: column;
