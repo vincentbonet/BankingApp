@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
+import './Login.css'; 
 
-const Register = () => {
+const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
-    const handleRegister = () => {
-        // Implement your registration logic here
+    const handleLogin = (e) => {
+        e.preventDefault();
     };
 
     return (
-        <div>
-            <h2>Login</h2>
-            <form>
+        <div className="container">
+            <h2>Login as User</h2>
+            <form className="form" onSubmit={handleLogin}>
                 <label htmlFor="username">Username:</label>
                 <input
                     type="text"
                     id="username"
+                    className="form-input"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
@@ -25,6 +27,7 @@ const Register = () => {
                 <input
                     type="password"
                     id="password"
+                    className="form-input"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
@@ -33,11 +36,12 @@ const Register = () => {
                 <input
                     type="email"
                     id="email"
+                    className="form-input"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <button type="button" onClick={handleRegister}>
+                <button type="submit" className="form-button">
                     Login
                 </button>
             </form>
@@ -45,4 +49,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;

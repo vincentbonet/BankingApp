@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
+import './Register.css'; 
 
 const Register = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
-    const handleRegister = () => {
-        // Implement your registration logic here
-        // You can use the values of username, password, and email
-        // to send a registration request to your backend server
+    const handleRegister = (e) => {
+        e.preventDefault();
     };
 
     return (
-        <div>
-            <h2>Register</h2>
-            <form>
+        <div className="container">
+            <h2>Register new User</h2>
+            <form className="form" onSubmit={handleRegister}>
                 <label htmlFor="username">Username:</label>
                 <input
                     type="text"
                     id="username"
+                    className="form-input"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
@@ -27,6 +27,7 @@ const Register = () => {
                 <input
                     type="password"
                     id="password"
+                    className="form-input"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
@@ -35,11 +36,12 @@ const Register = () => {
                 <input
                     type="email"
                     id="email"
+                    className="form-input"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
 
-                <button type="button" onClick={handleRegister}>
+                <button type="submit" className="form-button">
                     Register
                 </button>
             </form>
