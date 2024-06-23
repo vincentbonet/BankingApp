@@ -1,18 +1,18 @@
 import React from 'react';
 import './Footer.css';
 
-import { ReactComponent as FacebookIcon } from './facebook.svg';
-import { ReactComponent as TwitterIcon } from './twitter.svg';
-import { ReactComponent as InstagramIcon } from './instagram.svg';
+import facebookIcon from '../assets/facebook.svg';
+import twitterIcon from '../assets/twitter.svg';
+import instagramIcon from '../assets/instagram.svg';
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="social-links">
                 <p>&copy; 2024 Banking App. All rights reserved.</p>
-                <FacebookIcon className="social-icon" />
-                <TwitterIcon className="social-icon" />
-                <InstagramIcon className="social-icon" />
+                <img src={facebookIcon} alt="Facebook" className="social-icon" />
+                <img src={twitterIcon} alt="Twitter" className="social-icon" />
+                <img src={instagramIcon} alt="Instagram" className="social-icon" />
             </div>
         </footer>
     );
