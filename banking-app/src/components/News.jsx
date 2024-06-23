@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './News.css' 
 
 const News = () => {
-    const [articles, setArticles] = useState([]); // Array of articles
+    const [articles, setArticles] = useState([]); 
 
     useEffect(() => {
         
         const fetch = async () => {
             try {
                 const apiKey = 'BLAHBLAHBLAH'; 
-                const response = await fetch(`to/be/implemented/${apiKey}`); // Fetching the data
-                const data = await response.json(); // Parsing the data
+                const response = await fetch(`to/be/implemented/${apiKey}`); 
+                const data = await response.json(); 
             } catch (error) {
                 console.error(error);
             } 
