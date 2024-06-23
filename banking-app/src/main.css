@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Garamond', 'Georgia', serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  
 
   color-scheme: light dark;
   color: #ffffff;
