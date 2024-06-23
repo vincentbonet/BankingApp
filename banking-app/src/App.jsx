@@ -26,8 +26,8 @@ const App = () => {
     return (
         <MantineProvider withGlobalStyles withNormalizeCSS>
             <Router>
-                <div>
-                    <NavBar openLoginModal={openLoginModal} registerModalOpened={openRegisterModal}/>
+                <div className="app-container">
+                    <NavBar openLoginModal={openLoginModal} openRegisterModal={openRegisterModal} />
                     <div className="content">
                         <Routes>
                             <Route path='/' element={<Home />} />

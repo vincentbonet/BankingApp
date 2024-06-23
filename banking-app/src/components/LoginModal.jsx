@@ -21,8 +21,8 @@ const LoginModal = ({ opened, onClose }) => {
       title="Login"
       overlayOpacity={0.55}
       overlayBlur={3}
-      overlayColor="rgba(0, 0, 0, 0.6)" 
-      withCloseButton={false}
+      overlayColor="rgba(0, 0, 0, 0.6)"
+      withCloseButton={true}
       closeOnClickOutside={true}
       closeOnEscape={true}
     >
