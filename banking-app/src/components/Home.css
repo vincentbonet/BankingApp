@@ -2,7 +2,7 @@
     text-align: center;
     padding: 20px;
     color: #ffffff;
-    background-color: #000000; 
+    background-color: #333; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -74,7 +74,7 @@ p {
     background-color: #222222;
     padding: 20px;
     border-radius: 10px;
-    width: calc(50% - 20px); /* Two features per row */
+    width: calc(50% - 20px); 
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

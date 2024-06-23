@@ -10,9 +10,11 @@ const Footer = () => {
         <footer className="footer">
             <div className="social-links">
                 <p>&copy; 2024 Banking App. All rights reserved.</p>
-                <img src={facebookIcon} alt="Facebook" className="social-icon" />
-                <img src={twitterIcon} alt="Twitter" className="social-icon" />
-                <img src={instagramIcon} alt="Instagram" className="social-icon" />
+                <div className="social-icons">
+                    <img src={facebookIcon} alt="Facebook" className="social-icon" />
+                    <img src={twitterIcon} alt="Twitter" className="social-icon" />
+                    <img src={instagramIcon} alt="Instagram" className="social-icon" />
+                </div>
             </div>
         </footer>
     );

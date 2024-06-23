@@ -1,6 +1,32 @@
 .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+}
+
+.social-icon {
     fill:white;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
 }
