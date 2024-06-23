@@ -1,99 +1,47 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background-color: #302e2e;
+    align-items: center;
+    background-color: #333;
     padding: 10px 20px;
-    color: white;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.items {
-    list-style-type: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .items, .user-items {
+    list-style: none;
     display: flex;
-    margin: 0;
     padding: 0;
-}
-
-.items li {
-    margin: 0 15px;
-}
-
-.items li a {
-    color: #ffffff;
+    margin: 0;
+  }
+  
+  .items li, .user-items li {
+    margin-right: 20px;
+  }
+  
+  .items li:last-child, .user-items li:last-child {
+    margin-right: 0;
+  }
+  
+  .items a, .user-items a {
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.items li a:hover {
-    color: #ff0000;
-}
-
-.searchbar {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 0 15px;
-}
-
-.searchbar > * {
-    width: 100%;
-    max-width: 300px;
-    padding: 5px;
-    border: 1px solid #555555;
-    border-radius: 4px;
-    background-color: #444444;
-    color: #ffffff;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-
-.searchbar > *:focus {
-    border-color: #888888;
-    background-color: #555555;
-    outline: none;
-}
-
-.user-items {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.user-items li {
-    margin-left: 15px;
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-
-    .searchbar {
-        order: 2;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .items {
-        order: 1;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .user-items {
-        order: 3;
-        justify-content: flex-end;
-        margin-top: 10px;
-    }
-}
-
-body {
-    padding-top: 60px; 
-}
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .searchbar input[type="text"] {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  
+  .button {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #fff;
+    color: #333;
+  }

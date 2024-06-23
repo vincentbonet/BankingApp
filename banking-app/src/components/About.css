@@ -1,67 +1,33 @@
 .about-container {
-    padding: 20px;
+    padding: 40px;
     color: #ffffff;
-    background-color: #000000; 
+    background-color: #333;
     border-radius: 8px;
     max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Garamond', 'Georgia', serif; 
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h1, h2, h3 {
     color: #f0f0f0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 p {
-    margin: 10px 0;
-    line-height: 1.6;
+    margin: 15px 0;
+    line-height: 1.8;
 }
 
 ul {
-    padding-left: 20px;
+    padding-left: 40px;
+    list-style-type: disc;
 }
 
 li {
-    margin-bottom: 10px;
-}
-
-.team-members {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.team-member {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 8px;
-    width: calc(33.333% - 10px);
-    text-align: center;
-}
-
-.team-member h3 {
-    margin-top: 0;
-}
-
-.contact a {
-    color: #1e90ff;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-.contact a:hover {
-    color: #87ceeb;
-    border-bottom-color: #87ceeb;
-}
-
-@media (max-width: 768px) {
-    .team-member {
-        width: 100%;
-    }
+    margin-bottom: 15px;
 }

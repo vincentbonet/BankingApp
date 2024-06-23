@@ -3,18 +3,21 @@
 @tailwind utilities;
 
 :root {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
-  
+  --font-base: "Inter", sans-serif;
+  --color-base: #ffffff;
+  --background-base: #333;
+  --link-color: #bbbbbb;
+  --link-hover-color: #ffffff;
+  --link-border-color: transparent;
 
+  font-family: var(--font-base);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
   color-scheme: light dark;
-  color: #ffffff;
-  background-color: #333;
-
+  color: var(--color-base);
+  background-color: var(--background-base);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,66 +26,13 @@
 
 a {
   font-weight: 500;
-  color: #bbbbbb;
+  color: var(--link-color);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--link-border-color);
   transition: color 0.25s, border-bottom-color 0.25s;
 }
-a:hover {
-  color: #ffffff;
-  border-bottom-color: #ffffff;
-}
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #000000;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid #ffffff;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #000000;
-  color: #ffffff;
-  cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
-}
-button:hover {
-  border-color: #bbbbbb;
-  background-color: #111111;
-  color: #bbbbbb;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #ffffff;
-    background-color: #000000;
-  }
-  a {
-    color: #bbbbbb;
-  }
-  a:hover {
-    color: #ffffff;
-  }
-  button {
-    background-color: #111111;
-  }
+a:hover, a:focus {
+  color: var(--link-hover-color);
+  border-bottom-color: currentColor;
 }
