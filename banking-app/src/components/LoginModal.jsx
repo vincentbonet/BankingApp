@@ -15,7 +15,17 @@ const LoginModal = ({ opened, onClose }) => {
   };
 
   return (
-    <Modal opened={opened} onClose={onClose} title="Login">
+    <Modal
+      opened={opened}
+      onClose={onClose}
+      title="Login"
+      overlayOpacity={0.55}
+      overlayBlur={3}
+      overlayColor="rgba(0, 0, 0, 0.6)" 
+      withCloseButton={false}
+      closeOnClickOutside={true}
+      closeOnEscape={true}
+    >
       <form onSubmit={handleSubmit}>
         <TextInput
           label="Email"
