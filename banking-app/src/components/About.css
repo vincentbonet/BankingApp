@@ -1,33 +1,81 @@
 .about-container {
-    padding: 40px;
-    color: #ffffff;
-    background-color: #000000;
-    border-radius: 8px;
+    padding: 20px;
     max-width: 800px;
-    margin: 40px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: black;
+    color: white;
 }
 
-section {
-    margin-bottom: 30px;
+h1, h2 {
+    color: white;
 }
 
-h1, h2, h3 {
-    color: #f0f0f0;
-    margin-bottom: 15px;
-    font-weight: 600;
+.overview {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-p {
-    margin: 15px 0;
-    line-height: 1.8;
+.features ul {
+    list-style: none;
+    padding: 0;
 }
 
-ul {
-    padding-left: 40px;
-    list-style-type: disc;
+.features li {
+    background: #000000;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-li {
-    margin-bottom: 15px;
+.mission-vision {
+    background: #000000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.team {
+    margin-top: 40px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    background: #000000;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(33% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.team-member h3 {
+    margin: 0 0 10px;
+    color: #34495e;
+}
+
+.contact {
+    background: #000000;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contact a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
 }
