@@ -24,21 +24,34 @@ const NavBar = ({ openLoginModal, openRegisterModal }) => {
                     </li>
                 ))}
             </ul>
-            <div className='searchbar'>
-                <Searchbar suggestions={suggestions}/>
+            <div className="searchbar">
+                <Searchbar suggestions={suggestions} />
             </div>
             <ul className="user-items">
                 <li>
-                    <Button variant="outline" onClick={openLoginModal}>
+                    <Button
+                        variant="gradient"
+                        gradient={{ from: 'indigo', to: 'cyan' }}
+                        size="md"
+                        radius="xl"
+                        style={{ marginRight: '10px' }}
+                        onClick={openLoginModal}
+                    >
                         Login
                     </Button>
-                    <Button variant="outline" onClick={openRegisterModal}>
+                    <Button
+                        variant="gradient"
+                        gradient={{ from: 'teal', to: 'lime', deg: 105 }}
+                        size="md"
+                        radius="xl"
+                        onClick={openRegisterModal}
+                    >
                         Register
                     </Button>
                 </li>
             </ul>
         </nav>
     );
-}
+};
 
 export default NavBar;

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #000000;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
@@ -45,3 +45,18 @@
     background-color: #fff;
     color: #333;
   }
+  .navbar .mantine-Button-root {
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.navbar .mantine-Button-root:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .mantine-Button-root:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}

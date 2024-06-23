@@ -23,28 +23,6 @@ const Home = () => {
                 <p>Manage your finances with ease and security.</p>
                 <button className="cta-button">Get Started</button>
             </div>
-            <section className="features">
-                <h2>Features</h2>
-                <div className="features-list">
-                    {features.map((feature, index) => (
-                        <div key={index} className="feature">
-                            <h3>{feature.title}</h3>
-                            <p>{feature.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-            <section className="testimonials">
-                <h2>Testimonials</h2>
-                <div className="testimonials-list">
-                    {testimonials.map((testimonial, index) => (
-                        <div key={index} className="testimonial">
-                            <p>"{testimonial.text}"</p>
-                            <h4>- {testimonial.name}</h4>
-                        </div>
-                    ))}
-                </div>
-            </section>
         </div>
     );
 };
