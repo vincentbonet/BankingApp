@@ -13,6 +13,8 @@ const NavBar = ({ openLoginModal, openRegisterModal }) => {
         { name: 'Crypto', link: '/crypto' },
     ];
 
+    const suggestions = ['Apple', 'Banana', 'Orange', 'Pineapple', 'Strawberry'];
+
     return (
         <nav className="navbar">
             <ul className="items">
@@ -23,7 +25,7 @@ const NavBar = ({ openLoginModal, openRegisterModal }) => {
                 ))}
             </ul>
             <div className='searchbar'>
-                <Searchbar />
+                <Searchbar suggestions={suggestions}/>
             </div>
             <ul className="user-items">
                 <li>
