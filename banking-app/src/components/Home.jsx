@@ -1,6 +1,63 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import './Home.css';
+
+const Feature = ({ title, description }) => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+    React.useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
+    return (
+        <motion.div 
+            ref={ref}
+            className="feature"
+            initial="hidden"
+            animate={controls}
+            variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 }
+            }}
+            transition={{ duration: 0.5 }}
+        >
+            <h2>{title}</h2>
+            <p>{description}</p>
+        </motion.div>
+    );
+};
+
+const Testimonial = ({ name, text }) => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+    React.useEffect(() => {
+        if (inView) {
+            controls.start('visible');
+        }
+    }, [controls, inView]);
+
+    return (
+        <motion.div 
+            ref={ref}
+            className="testimonial"
+            initial="hidden"
+            animate={controls}
+            variants={{
+                visible: { opacity: 1, y: 0 },
+                hidden: { opacity: 0, y: 50 }
+            }}
+            transition={{ duration: 0.5 }}
+        >
+            <h2>{name}</h2>
+            <p>{text}</p>
+        </motion.div>
+    );
+};
 
 const Home = () => {
     const features = [
@@ -11,20 +68,29 @@ const Home = () => {
     ];
 
     const testimonials = [
-        { name: 'Jane Doe', text: 'This app has transformed the way I manage my finances. Highly recommend!' },
-        { name: 'John Smith', text: 'User-friendly and secure. It’s my go-to app for all banking needs.' }
+        { name: 'Jane Doe', text: 'This app has transformed the way I manage my finances. Highly recommend! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam suscipit.' },
+        { name: 'John Smith', text: 'User-friendly and secure. It’s my go-to app for all banking needs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.' },
+        { name: 'Alice Johnson', text: 'Great experience overall. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula.' },
+        { name: 'Bob Brown', text: 'Highly efficient and secure. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.' }
     ];
 
     return (
         <div className="home-container">
-            <motion.div 
-                className="hero"
-                initial={{ opacity: 0, y: -50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-            >
-                <h1>Welcome to My Banking App!</h1>
-                <p>Manage your finances with ease and security.</p>
+            <div className="section hero">
+                <motion.h1
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                >
+                    Welcome to My Banking App!
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 1 }}
+                >
+                    Manage your finances with ease and security.
+                </motion.p>
                 <motion.button
                     className="cta-button"
                     whileHover={{ scale: 1.1 }}
@@ -32,43 +98,19 @@ const Home = () => {
                 >
                     Get Started
                 </motion.button>
-            </motion.div>
+            </div>
 
-            <motion.div
-                className="features"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 1 }}
-            >
+            <div className="section features">
                 {features.map((feature, index) => (
-                    <motion.div 
-                        className="feature" 
-                        key={index}
-                        whileHover={{ scale: 1.02 }}
-                    >
-                        <h2>{feature.title}</h2>
-                        <p>{feature.description}</p>
-                    </motion.div>
+                    <Feature key={index} title={feature.title} description={feature.description} />
                 ))}
-            </motion.div>
+            </div>
 
-            <motion.div
-                className="testimonials"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 1 }}
-            >
+            <div className="section testimonials">
                 {testimonials.map((testimonial, index) => (
-                    <motion.div 
-                        className="testimonial" 
-                        key={index}
-                        whileHover={{ scale: 1.02 }}
-                    >
-                        <h2>{testimonial.name}</h2>
-                        <p>{testimonial.text}</p>
-                    </motion.div>
+                    <Testimonial key={index} name={testimonial.name} text={testimonial.text} />
                 ))}
-            </motion.div>
+            </div>
         </div>
     );
 };
