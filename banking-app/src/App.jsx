@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import News from './components/News';
+import Portfolio from './components/Portfolio'
 import Stocks from './components/Stocks';
 import Crypto from './components/Crypto';
 import Footer from './components/Footer';
@@ -35,9 +36,9 @@ const App = () => {
                             <Route path='/news' element={<News />} />
                             <Route path='/stocks' element={<Stocks />} />
                             <Route path='/crypto' element={<Crypto />} />
+                            <Route path='/account' element={<Portfolio />}/>
                         </Routes>
                     </div>
-                    <Portfolio />
                     <Footer />
                     <LoginModal opened={loginModalOpened} onClose={closeLoginModal} />
                     <RegisterModal opened={registerModalOpened} onClose={closeRegisterModal} />

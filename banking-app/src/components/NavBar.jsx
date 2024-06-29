@@ -11,6 +11,7 @@ const NavBar = ({ openLoginModal, openRegisterModal }) => {
         { name: 'News', link: '/news' },
         { name: 'Stocks', link: '/stocks' },
         { name: 'Crypto', link: '/crypto' },
+        { name: 'Account', link: '/account'},
     ];
 
     const suggestions = ['Apple', 'Banana', 'Orange', 'Pineapple', 'Strawberry'];
