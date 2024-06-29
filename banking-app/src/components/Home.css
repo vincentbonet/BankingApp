@@ -1,13 +1,12 @@
-/*Home.css*/
+/* Home.css */
 body {
     margin: 0;
-    font-family: 'Arial, sans-serif';
+    overflow-x: hidden;
 }
 
 .home-container {
     background-color: #000;
     color: #fff;
-    overflow-x: hidden;
 }
 
 .section {
@@ -22,17 +21,23 @@ body {
 
 .hero {
     text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 20px;
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    animation: fadeIn 1s ease-out 0.5s;
 }
 
 .cta-button {
@@ -44,6 +49,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    animation: fadeInUp 1s ease-out 1s;
 }
 
 .cta-button:hover {
@@ -67,6 +73,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: transform 0.2s;
+}
+
+.feature:hover, .testimonial:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
 
 .feature h2, .testimonial h2 {
@@ -83,4 +95,55 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .features, .testimonials {
+        width: 90%;
+    }
+
+    .feature, .testimonial {
+        padding: 15px;
+    }
 }

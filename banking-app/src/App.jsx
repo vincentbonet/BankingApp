@@ -37,6 +37,7 @@ const App = () => {
                             <Route path='/crypto' element={<Crypto />} />
                         </Routes>
                     </div>
+                    <Portfolio />
                     <Footer />
                     <LoginModal opened={loginModalOpened} onClose={closeLoginModal} />
                     <RegisterModal opened={registerModalOpened} onClose={closeRegisterModal} />

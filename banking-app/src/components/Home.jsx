@@ -14,9 +14,9 @@ const Feature = ({ title, description }) => {
     }, [controls, inView]);
 
     return (
-        <motion.div 
+        <motion.div
             ref={ref}
-            className="feature"
+            className="content-container"
             initial="hidden"
             animate={controls}
             variants={{
@@ -42,9 +42,9 @@ const Testimonial = ({ name, text }) => {
     }, [controls, inView]);
 
     return (
-        <motion.div 
+        <motion.div
             ref={ref}
-            className="testimonial"
+            className="content-container"
             initial="hidden"
             animate={controls}
             variants={{
@@ -74,43 +74,19 @@ const Home = () => {
         { name: 'Bob Brown', text: 'Highly efficient and secure. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.' }
     ];
 
+    const sections = [
+        { className: 'hero', content: <motion.h1 initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Welcome to My Banking App!</motion.h1> },
+        { className: 'features', content: features.map((feature, index) => <Feature key={index} title={feature.title} description={feature.description} />) },
+        { className: 'testimonials', content: testimonials.map((testimonial, index) => <Testimonial key={index} name={testimonial.name} text={testimonial.text} />) }
+    ];
+
     return (
         <div className="home-container">
-            <div className="section hero">
-                <motion.h1
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                >
-                    Welcome to My Banking App!
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 1 }}
-                >
-                    Manage your finances with ease and security.
-                </motion.p>
-                <motion.button
-                    className="cta-button"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    Get Started
-                </motion.button>
-            </div>
-
-            <div className="section features">
-                {features.map((feature, index) => (
-                    <Feature key={index} title={feature.title} description={feature.description} />
-                ))}
-            </div>
-
-            <div className="section testimonials">
-                {testimonials.map((testimonial, index) => (
-                    <Testimonial key={index} name={testimonial.name} text={testimonial.text} />
-                ))}
-            </div>
+            {sections.map((section, index) => (
+                <div key={index} className={`section ${section.className}`}>
+                    <div className="overlay">{section.content}</div>
+                </div>
+            ))}
         </div>
     );
 };
