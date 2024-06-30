@@ -10,7 +10,7 @@ const Portfolio = () => {
   useEffect(() => {
     const fetchHoldings = async () => {
       try {
-        const response = await fetch('https://api.example.com/holdings');
+        const response = await fetch('BLAHBLAHBLAH');
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }

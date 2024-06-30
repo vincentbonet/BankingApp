@@ -6,6 +6,8 @@ import Home from './components/Home';
 import About from './components/About';
 import News from './components/News';
 import Portfolio from './components/Portfolio'
+import Retirement from './components/Retirement';
+import LandingRetire from './components/LandingRetire';
 import Stocks from './components/Stocks';
 import Crypto from './components/Crypto';
 import Footer from './components/Footer';
@@ -37,6 +39,8 @@ const App = () => {
                             <Route path='/stocks' element={<Stocks />} />
                             <Route path='/crypto' element={<Crypto />} />
                             <Route path='/account' element={<Portfolio />}/>
+                            <Route path='/retirement' element={<LandingRetire />} />
+                            <Route path="/retirement/signup" element={<Retirement />} />
                         </Routes>
                     </div>
                     <Footer />

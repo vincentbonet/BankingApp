@@ -7,11 +7,12 @@ import Searchbar from './Searchbar';
 const NavBar = ({ openLoginModal, openRegisterModal }) => {
     const items = [
         { name: 'Home', link: '/' },
-        { name: 'About', link: '/about' },
-        { name: 'News', link: '/news' },
+        { name: 'About', link: '/about' }, // put in footer
+        { name: 'News', link: '/news' }, // delete and put into other components
         { name: 'Stocks', link: '/stocks' },
         { name: 'Crypto', link: '/crypto' },
         { name: 'Account', link: '/account'},
+        { name: 'Retirement', link: '/retirement' },
     ];
 
     const suggestions = ['Apple', 'Banana', 'Orange', 'Pineapple', 'Strawberry'];
